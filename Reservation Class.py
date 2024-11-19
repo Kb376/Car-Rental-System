@@ -30,7 +30,7 @@ class Reservation:
         return "Reservation cancelled."
 
 # Example usage:
-reservation = Reservation(101, 202, 303, 20241120, 1400, "Confirmed", 4)
+reservation = Reservation(101, 202, 303, '2024-11-25', 1400, "Confirmed", 4)
 
 # Display details
 print(reservation.reservation_details())

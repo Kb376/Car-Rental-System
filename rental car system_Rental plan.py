@@ -1,4 +1,3 @@
-// 
 
 class RentalPlan:
     def __init__(self, plan_id, plan_name, duration, rate):
@@ -14,7 +13,19 @@ class RentalPlan:
             "Duration": self.duration,
             "Rate": self.rate
         }
+    
     def is_valid_plan(self):
         if self.duration <= 0 or self.rate <= 0:
             return False
         return True
+    
+    def calculate_discounted_rate(self, discount_percentage):
+        if 0 < discount_percentage <= 100:
+            return self.rate * (1 - discount_percentage / 100)
+        else:
+            raise ValueError("Invalid discount percentage. Must be between 0 and 100.")
+        
+
+rental_plan = RentalPlan(1, "Weekend Plan", 2, 50.0)
+# Display details
+print(rental_plan.get_plan_details())

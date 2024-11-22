@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from LoginTest1 import CarRentalSystem  # Import the login system
+from Class_Login import CarRentalSystem  # Import the login system
 
 # Navigation Functions
 def open_login():

@@ -1,0 +1,3 @@
+rental_id,car_id,model,year,color
+1,101,Toyota Camry,2020,Blue
+2,102,Honda Accord,2019,Black

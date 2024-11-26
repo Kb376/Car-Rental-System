@@ -10,12 +10,8 @@ def open_login():
     CarRentalSystem(login_root)
 
 def open_class_reservation():
-    # Hide the main window
-    root.withdraw()
     # Open the reservation window
     reservation_gui()
-    # Show the main window again after the reservation GUI is closed
-    root.deiconify()
 
 def open_inventory():
     """Placeholder for Inventory Management Page."""

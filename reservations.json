@@ -1,0 +1,23 @@
+{
+    "1": {
+        "Car Make": "Toyota",
+        "Car Model": "Camry",
+        "Start Date": "2023-12-01",
+        "Return Date": "2023-12-05",
+        "Payment Option": "Not Paid"
+    },
+    "2": {
+        "Car Make": "",
+        "Car Model": "",
+        "Start Date": "",
+        "Return Date": "",
+        "Payment Option": ""
+    },
+    "3": {
+        "Car Make": "Toyota",
+        "Car Model": "Camry",
+        "Start Date": "2023-12-01",
+        "Return Date": "2023-12-05",
+        "Payment Option": "Not Paid"
+    }
+}

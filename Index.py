@@ -1,12 +1,13 @@
 import tkinter as tk
 from tkinter import messagebox
 from Class_Login import CarRentalSystem  # Import the login system
+from Manage_Account import CarRentalAdminGUI  # Import the admin GUI class for rental admin
 
 # Navigation Functions
 def open_login():
     """Open the Login Window."""
-    login_root = tk.Toplevel(root)
-    CarRentalSystem(login_root)
+    login_root = tk.Toplevel(root)  # Creates a new top-level window for login
+    CarRentalSystem(login_root)  # Initialize the CarRentalSystem in the new window
 
 def open_reservation():
     """Placeholder for Reservation Page."""
@@ -23,6 +24,13 @@ def open_inventory():
 def open_customer_portal():
     """Placeholder for Customer Portal."""
     messagebox.showinfo("Navigation", "Navigating to Customer Portal page...")
+
+def open_rental_admin():
+    """Open rental admin window."""
+    rental_root = tk.Toplevel(root)  # Creates a new top-level window
+    rental_root.title("Rental Admin")  # Sets the window title
+    rental_root.geometry("800x600")  # Sets the size of the window
+    CarRentalAdminGUI(rental_root)  # Initializes the CarRentalAdminGUI class in the new window
 
 # Main Window
 root = tk.Tk()
@@ -65,6 +73,7 @@ create_card(card_container, 0, 1, "Make a Reservation", "Create new reservations
 create_card(card_container, 0, 2, "Return a Car", "Process vehicle returns efficiently.", open_return)
 create_card(card_container, 1, 0, "Inventory Management", "Track and update vehicle inventory.", open_inventory)
 create_card(card_container, 1, 1, "Customer Portal", "Access client information and rental history.", open_customer_portal)
+create_card(card_container, 1, 2, "Manage Car Account", "Add, modify, or delete car details.", open_rental_admin)
 
 # Footer
 footer_frame = tk.Frame(root)
@@ -78,4 +87,3 @@ footer_link.pack()
 
 # Run the App
 root.mainloop()
-

@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from Class_Login import CarRentalSystem  # Import the login system
+from class_Reservation import reservation_gui  # Import the reservation window function
 
 # Navigation Functions
 def open_login():
@@ -8,10 +9,13 @@ def open_login():
     login_root = tk.Toplevel(root)
     CarRentalSystem(login_root)
 
-def open_return():
-    """Placeholder for Returns Page."""
-    messagebox.showinfo("Navigation", "Navigating to returns page...")
-
+def open_class_reservation():
+    # Hide the main window
+    root.withdraw()
+    # Open the reservation window
+    reservation_gui()
+    # Show the main window again after the reservation GUI is closed
+    root.deiconify()
 
 def open_inventory():
     """Placeholder for Inventory Management Page."""
@@ -58,8 +62,7 @@ def create_card(parent, row, col, title, description, command):
 
 # Cards (Arranged in Grid)
 create_card(card_container, 0, 0, "Login", "Click here to login", open_login)
-create_card(card_container, 0, 1, "Make a Reservation", "Create new reservations for clients.", open_return)
-create_card(card_container, 0, 2, "Return a Car", "Process vehicle returns efficiently.", open_return)
+create_card(card_container, 0, 1, "Make a Reservation", "Create new reservations for clients.", open_class_reservation)
 create_card(card_container, 1, 0, "Inventory Management", "Track and update vehicle inventory.", open_inventory)
 create_card(card_container, 1, 1, "Customer Portal", "Access client information and rental history.", open_customer_portal)
 
